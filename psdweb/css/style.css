@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300&display=swap');
+@import url(reset.css);
+
+
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+/* layout */
+
+.container{
+    width: 1146px;
+    margin: 0 auto;
+}
+
+body{
+    font-size: 18px;
+    line-height: 27px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+}

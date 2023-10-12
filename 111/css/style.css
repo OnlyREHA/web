@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/* reset */
+li {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+
+/* wrap */
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* header */
+#header {}
+
+#header h1 {
+    float: left;
+    width: 120px;
+}
+
+#header h1 a img {
+    width: 100%;
+}
+
+#header .nav {
+    float: right;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+#header .nav ul {}
+
+#header .nav ul li {
+    width: 120px;
+    float: left;
+    position: relative;
+}
+
+#header .nav ul li a {
+    background-color: #ccc;
+    display: block;
+    padding: 20px 15px;
+    transition: 0.3s;
+}
+
+#header .nav ul li a:hover {
+    background-color: #ddd;
+}
+
+#header .nav ul li .submenu {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    display: none;
+    z-index: 999;
+}
+
+/* banner */
+#banner {
+    height: 378px;
+    overflow: hidden;
+}
+
+#banner .slidelist {
+    position: relative;
+}
+
+#banner .slidelist .slideimg {
+    position: relative;
+}
+
+#banner .slidelist .slideimg h2 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 10px 30px;
+    border-radius: 25px;
+    color: #fff;
+}
+
+#banner .slidelist .slideimg img {
+    width: 100%;
+    /* img태그는 인라인 요소인데 넓이를 인식한다 */
+    /* img태그의 특징
+       인라인요소-> 예측하지 못하는 공간을 가지고 있음
+       해결방법 2가지
+       1.display:block 
+       2.vertical-align:top*/
+    display: block;
+}
+
+#content_1 {
+    margin-top: 15px;
+}
+
+#content_1 .notice {
+    width: 49%;
+    height: 218px;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    float: left;
+    padding: 30px;
+    position: relative;
+}
+
+#content_1 .notice ul {}
+
+#content_1 .notice ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+#content_1 .notice ul li a {
+    font-size: 24px;
+    color: #999;
+    font-weight: bold;
+}
+
+#content_1 .notice ul .active a {
+    color: #000;
+}
+
+#content_1 .notice ul li ul {
+    position: absolute;
+    left: 30px;
+    top: 75px;
+}
+
+#content_1 .notice ul li ul li {}
+
+#content_1 .notice ul li ul li a {
+    width: 68%;
+    font-size: 16px;
+    font-weight: 400;
+    float: left;
+    /* 말줄임말 */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* //말줄임말 */
+
+    font-weight: normal;
+    /* 폰트 두께 초기화 */
+}
+
+#content_1 .notice ul li ul li span {
+    float: right;
+}
+
+
+
+
+
+#content_1 .ad {
+    width: 49%;
+    height: 218px;
+    background-color: lightsalmon;
+    float: right;
+}
+
+#content_1 .ad a img {
+    width: 100%;
+}
+
+#content_2 {
+    margin-top: 20px;
+}
+
+#content_2 h2 {
+    display: block;
+    height: 35px;
+    font-size: 25px;
+}
+
+#content_2 ul {
+    width: 100%;
+}
+
+#content_2 ul li {
+    width: 24.25%;
+    float: left;
+    margin-right: 1%;
+    text-align: center;
+}
+
+#content_2 ul li:last-child {
+    margin-right: 0;
+
+}
+
+#content_2 ul li div {
+    overflow: hidden;
+}
+
+#content_2 ul li div img {
+    width: 100%;
+    transition: 0.3s;
+}
+
+#content_2 ul li div:hover img {
+    transform: scale(1.2);
+    /* ->width:120% */
+}
+
+#content_2 ul li div span {}
+
+/* //content_2 */
+
+#footer {
+    padding: 30px 0;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+
+
+}
+
+#footer address {
+    /* address태그는 기울림체(italic) 
+    -> 일반 font-style:normal;*/
+    font-style: normal;
+
+}
+
+#footer address ul {
+    width: 550px;
+}
+
+#footer address ul li {
+    /* inline요소: 공간을 인식하지 못함 -> padding ,margin의 상하값이 적용이 안됨 */
+
+    /* display: inline-block; 인라인요소이나 블럭요소처럼 넓이를 인식한다. */
+    display: inline;
+    padding: 0 15px 0 10px;
+}
+
+#footer address ul li.left {
+    padding-left: 0;
+}
+
+#footer address p {
+    text-transform: uppercase;
+    /* 
+   text-transform: uppercase; ->대문자로 바꿈
+   text-transform: lowercase; ->소문자로 바꿈
+    */
+    padding-top: 30px;
+}
+
+/* //footer */
+
+
+/* 팝업 */
+.layer_bg {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.layer_bg .layer {
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+
+}
+
+/* ->자식이 position: absolute;일때 기준을 되는 부모가
+position:static;가 기본값인데 
+position이 relative, absolute, fixed이라면 기준이 될수있다
+position:static; 일때는 기준이 될수 없다 */
+
+.layer_bg .layer h2 {
+    font-size: 35px;
+}
+
+.layer_bg .layer .close {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-weight: bold;
+    font-size: 30px;
+}
