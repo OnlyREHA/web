@@ -1,32 +1,37 @@
 @charset "UTF-8";
 
-*{margin: 0; padding: 0;}
+* {
+    margin: 0;
+    padding: 0;
+}
 
 /* rest */
-ul,ol,li{
+ul,
+ol,
+li {
     list-style: none;
 }
 
-a{
+a {
     color: #333;
     text-decoration: none;
 }
 
-.clearfix::after{
+.clearfix::after {
     content: "";
-    clear:both;
+    clear: both;
     display: block;
 }
 
-#wrap{
+#wrap {
     width: 1000px;
     margin: 0 auto;
 }
 
-    
-#header{}
 
-#header h1{
+#header {}
+
+#header h1 {
     float: left;
     width: 110px;
     padding-top: 15px;
@@ -35,38 +40,36 @@ a{
 /* inline요소 안에는 block요소 들어가지 않음
 block요소 안에는 inline요소,block요소 다 들어감 */
 
-#header h1 a{}
 
-#header h1 a img{
+#header h1 a img {
     width: 100%;
 }
 
-#header .nav{
+#header .nav {
     float: right;
     background-color: #ddd;
 }
 
-#header .nav ul{}
 
-#header .nav ul li{
+#header .nav ul li {
     float: left;
     width: 140px;
     text-align: center;
     position: relative;
 }
 
-#header .nav ul li a{
+#header .nav ul li a {
     display: block;
     padding: 24px 20px 20px;
     transition: 0.3s;
 }
 
 
-#header .nav ul li a:hover{
+#header .nav ul li a:hover {
     background-color: #ccc;
 }
 
-#header .nav ul li .submenu{
+#header .nav ul li .submenu {
     position: absolute;
     z-index: 100;
     top: 65px;
@@ -74,36 +77,34 @@ block요소 안에는 inline요소,block요소 다 들어감 */
     display: none;
 }
 
-#header .nav ul li .submenu li{}
-
-#header .nav ul li .submenu li a{
+#header .nav ul li .submenu li a {
     background-color: #888;
     padding: 10px;
     color: #fff;
 }
 
-#header .nav ul li .submenu li a:hover{
+#header .nav ul li .submenu li a:hover {
     background-color: #666;
 }
 
-#banner{
+#banner {
     overflow: hidden;
 }
 
-#banner .slidelist{
+#banner .slidelist {
     width: 3000px;
     position: relative;
 }
 
-#banner .slidelist .slideimg{
+#banner .slidelist .slideimg {
     width: 1000px;
     position: relative;
     float: left;
 }
 
-#banner .slidelist .slideimg h2{
+#banner .slidelist .slideimg h2 {
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     background-color: rgba(0, 0, 0, 0.4);
@@ -112,11 +113,12 @@ block요소 안에는 inline요소,block요소 다 들어감 */
     color: #fff;
 }
 
-#banner .slidelist .slideimg img{
+#banner .slidelist .slideimg img {
     width: 100%;
     vertical-align: top;
-    
+
 }
+
 /* 
 img태그에 아래쪽에 빈틈이 생기는 이유 -> 인라인요소이기 때문에
 
@@ -124,24 +126,24 @@ img태그에 아래쪽에 빈틈이 생기는 이유 -> 인라인요소이기 �
 2)vertical-alingn: top;
  */
 
- /* content1 */
- #content1{
+/* content1 */
+#content1 {
     margin-top: 20px;
- }
+}
 
- #content1 .left{
+#content1 .left {
     float: left;
     width: 49%;
-    
+
     /* => background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit; */
 
     /* => background-origin은 배경 이미지의 원점 위치(배경 위치 지정 영역)를 지정
     background-origin: padding-box|border-box|content-box| */
 
-   /* => background-clip속성은 요소 내에서 배경(색상 또는 이미지)이 얼마나 확장되어야 하는지를 정의
+    /* => background-clip속성은 요소 내에서 배경(색상 또는 이미지)이 얼마나 확장되어야 하는지를 정의
     background-clip: border-box|padding-box|content-box */
 
-   /* => background-attachment속성은 배경 이미지가 페이지의 나머지 부분과 함께 스크롤되는지 아니면 고정되는지를 설정
+    /* => background-attachment속성은 배경 이미지가 페이지의 나머지 부분과 함께 스크롤되는지 아니면 고정되는지를 설정
     background-attachment: scroll|fixed|local
  */
     /* 
@@ -153,14 +155,14 @@ img태그에 아래쪽에 빈틈이 생기는 이유 -> 인라인요소이기 �
     background-position: right 40px center; 
     backgroound color와 image , repeat는 묶어서 설정
     background position과 size는  따로 설정 할수있음*/
-    background:  #f2f2f2 url(../images/bg1.jpg) no-repeat ;
+    background: #f2f2f2 url(../images/bg1.jpg) no-repeat;
     background-size: 80px;
     background-position: right 40px center;
     padding: 20px;
     box-sizing: border-box;
 }
 
- #content1 .right{
+#content1 .right {
     float: right;
     width: 49%;
     background-color: #f2f2f2;
@@ -171,34 +173,35 @@ img태그에 아래쪽에 빈틈이 생기는 이유 -> 인라인요소이기 �
     /* background-position: x축 y축; => 기본값 */
     padding: 20px;
     box-sizing: border-box;
- }
+}
 
- #content1 .title{
+#content1 .title {
     font-size: 22px;
     padding-bottom: 5px;
- }
+}
 
- #content1 .desc{
+#content1 .desc {
     font-size: 14px;
     color: #666;
     padding-bottom: 15px;
 
- }
+}
 
- #content1 .left .btn{
+#content1 .left .btn {
     background: url(../images/icon1.jpg) no-repeat left center;
     background-size: 20px;
     padding-left: 25px;
- }
+}
 
- #content1 .right .btn{
+#content1 .right .btn {
     background: url(../images/icon2.jpg) no-repeat left center;
     background-size: 20px;
     padding-left: 25px;
- }
+}
 
- #content1 .right .btn em{}
-  /*  -> 강조하기 위한 태그(인라인 요소)
+/* #content1 .right .btn em {} */
+
+/*  -> 강조하기 위한 태그(인라인 요소)
 
          em태그 => 글자를 기울리지만 내용을 강조하는 역할을 함 
          i태그 =>  글자를 기울림
@@ -207,6 +210,98 @@ img태그에 아래쪽에 빈틈이 생기는 이유 -> 인라인요소이기 �
          b태그 => 글자를 굵게 만듬
  */
 
+/* content2 */
+#content2 {
+    margin-top: 30px;
+}
+
+#content2 .tab_menu {}
+
+#content2 .tab_menu ul {
+    overflow: hidden;
+}
+
+#content2 .tab_menu ul li {
+    float: left;
+    margin-right: 15px;
+    /* float에 인해 부모의 영역이 깨짐현상 막기
+1)clear:both;
+2)overflow:hidden;
+3)부모에게 높이값이 강제로 주기 */
+}
+
+#content2 .tab_menu ul li a {
+    font-size: 24px;
+    display: block;
+    padding-bottom: 10px;
+    color: #999;
+}
+
+#content2 .tab_menu ul li.active a {
+    color: #000;
+    font-weight: bold;
+}
+
+#content2 .tab_cont {}
+
+#content2 .tab_cont>div {
+    overflow: hidden;
+}
+
+#content2 .tab_cont>div figure {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+}
+
+#content2 .tab_cont>div figure:last-child {
+    margin-right: 0;
+}
+
+/* 
+#content2 .tab_cont>div figure:first-child{//첫째}
+#content2 .tab_cont>div figure:nth-child(2){//두번째} */
+#content2 .tab_cont>div figure img {
+    width: 100%;
+}
+
+#content2 .tab_cont>div figure figcaption {}
+
+#footer{
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #202020;
+}
+
+#footer h2{
+    float: left;
+    width: 150px;
+}
+
+#footer h2 img{
+    width: 100%;
+}
+
+#footer .foot{
+    float: right;
+}
+
+#footer .foot ul{
+    padding-bottom: 10px;
+}
+
+#footer .foot ul li{
+    display: inline;
+}
+
+#footer .foot ul li a{
+    color: white;
+}
+
+#footer address{
+    color: #ccc;
+    font-style: normal;
+}
 
 
 
@@ -218,9 +313,16 @@ img태그에 아래쪽에 빈틈이 생기는 이유 -> 인라인요소이기 �
 
 
 
- /* layer팝업 */
 
-.layer_bg{
+
+
+
+
+
+
+/* layer팝업 */
+
+.layer_bg {
     position: fixed;
     left: 0;
     right: 0;
@@ -230,13 +332,13 @@ img태그에 아래쪽에 빈틈이 생기는 이유 -> 인라인요소이기 �
     display: none;
 }
 
-.layer_bg .layer{
+.layer_bg .layer {
     background-color: #fff;
     padding: 20px;
     width: 500px;
     height: 500px;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
     /* => 가운데 맞추기
@@ -244,14 +346,10 @@ img태그에 아래쪽에 빈틈이 생기는 이유 -> 인라인요소이기 �
     right: calc(50% - 250px); */
 }
 
-.layer_bg .layer h2{}
+.layer_bg .layer h2 {}
 
-.layer_bg .layer .close{
+.layer_bg .layer .close {
     position: absolute;
     right: 20px;
     bottom: 20px;
 }
-
-
-
-
