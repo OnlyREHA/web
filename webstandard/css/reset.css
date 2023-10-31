@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* 폰트초기화 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+body,input,textarea,select,button,table{
+    font-family: 'Nanum Gothic','맑은 고딕',dotum,'돋음', sans-serif;
+    color: #222;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+em, address{
+    font-style: normal;
+}
+
+/* 블릭기호 초기화 */
+ul,ol,li{
+    list-style: none;
+}
+
+/* 제목태그초기화 */
+h1,h2,h3,h4.h5,h6{
+    font-size: 13px;
+    color: #222;
+    font-weight: normal;
+}
+
+/* 테두리초기화 */
+fieldset{
+    border: none;
+}
+
+/* 버튼초기화 */
+button{
+    border: none;
+}
+
+/* ir효과 -> 웹접근성 */
+.ir{
+    position: absolute;
+    overflow: hidden;
+    width: 0;height: 0;
+    line-height: 0;
+    text-indent: -9999999999em;
+}
+
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+body,div,ul,li,dl,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,th,td,tr,textarea,button,form{
+    margin: 0; padding: 0;
+}
+
+a{
+    color: #222;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #390;
+}
+
+

@@ -9,14 +9,413 @@ font-family: 'Roboto', sans-serif; */
 
 /* layout */
 
-.container{
+.container {
     width: 1146px;
     margin: 0 auto;
 }
 
-body{
+body {
+
+    /* 예시)
+    font: italic small-caps bold 12px/30px Georgia, serif; 
+    font-style font-variant font-weight font-size/line-height font-family */
+
+    /* 
+    입력값
     font-size: 18px;
     line-height: 27px;
     font-family: 'Open Sans', sans-serif;
     font-style: normal;
+     */
+    font: normal bold 18px/27px 'Open Sans', sans-serif;
 }
+
+a{
+    color: #f0ad64;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    border: 1px solid #f0ad64;
+    padding: 0 30px;
+    line-height: 54px;
+    display: inline-block;
+    /* transition: 0.3s; */
+    transition: 300ms;
+    text-transform: uppercase;
+
+
+}
+
+.btn:hover{
+    background-color: #f0ad64;
+    color: #fff;
+}
+
+
+
+/* header */
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 27px 0;
+    z-index: 99999999;
+}
+
+header .logo{
+    float: left;
+}
+
+header .logo a{
+    display: block;
+    width: 54px;
+    height: 54px;
+    background-image: url(../image/logo.png);
+    text-indent: -9999999em;
+}
+
+
+header nav{
+    float: right;
+}
+
+
+header nav ul li{
+    float: left;
+    margin-left: 20px;
+}
+
+header nav ul li a{
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 54px;
+    /* 1000 = 1em 
+       letter-spacing : 텍스트자간*/
+    letter-spacing: 0.1em;
+}
+
+.banner .banner_list .slide{
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    text-align: center;
+    padding-top: 162px;
+    box-sizing: border-box;
+    
+}
+
+.banner .banner_list .slide1{
+    background-image: url(../image/slide-1-bg.jpg);
+}
+
+.banner .banner_list .slide2{
+    background-image: url(../image/slide-2-bg.jpg);
+}
+
+.banner .banner_list .slide3{
+    background-image: url(../image/slide-3-bg.jpg);
+}
+
+
+
+.banner .banner_list .slide .main_tit{
+    color: #fff;
+    background-color: #f6604c;
+    font-size: 55px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.025em;  /* 25/1000em */
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 54px;
+    text-align: center;
+    padding: 27px 40px;
+}
+
+.banner .banner_list .slide .slide_contents{
+    width: 700px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 85px 0 43px;
+    margin-top: -27px;
+}
+
+
+.banner .banner_list .slide .slide_contents p{
+    color: #fff;
+    margin-bottom: 54px;
+    font-weight: 300;
+}
+
+/* 
+콘텐츠를 보이지 않게 하는 방법
+1. display:none; <-> display:block(영역이 사라짐)
+2. opacity:0; <-> opasity:1;(영역이 유지) => 애니메이션 가능
+3. visibility:hidden; <-> visibility:visible;(영역이 유지)
+4. width:0; height:0; overflow:hidden;
+ */
+
+.banner .banner_list .slick-arrow{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    visibility: hidden;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 50px;
+}
+
+
+.banner .banner_list .slick-prev{
+    margin-left: -583px;
+} 
+
+.banner .banner_list .slick-prev:before{
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+} 
+
+.banner .banner_list .slick-next{
+    margin-left: 538px;
+}
+
+.banner .banner_list .slick-next::before{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: visible;
+} 
+
+.banner .banner_list .slick-dots{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 30px;
+    /* 부모 영역이 깨짐 현상이 일어나지 않을때
+    =>자식이 float 있고 부모도 float이 있을때 부모가 position 중 absolute, fixed가 있음 */
+}
+
+.banner .banner_list .slick-dots li{
+    float: left;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 0 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.banner .banner_list .slick-dots li.slick-active{
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    background: none;
+}
+
+.banner .banner_list .slick-dots li button{
+    visibility: hidden;
+    cursor: pointer;
+}
+
+/* //banner */
+
+
+.main_content{
+    text-align: center;
+    padding: 75px 0 85px;
+}
+
+.main_content .content_tit{
+    font-size: 32px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #2e2e2e;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+}
+
+.main_content .project_link{
+    color: #f6604c;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    letter-spacing: 0.025em;
+    margin: 54px 0;
+
+
+}
+
+.main_content .project_list li{
+    position: relative;
+    float: left;
+    width: 362px;
+    height: 362px;
+    margin: 0 30px 30px 0;
+    border: 1px solid #919191;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
+
+/* //홀수
+.main_content .project_list li:nth-child(odd){}
+.main_content .project_list li:nth-child(2n+1){} */
+
+/* //짝수
+.main_content .project_list li:nth-child(even){}
+.main_content .project_list li:nth-child(2n){} */
+
+.main_content .project_list li:nth-child(3n){
+    margin-right: 0;
+}
+
+.main_content .project_list li:nth-child(5),
+.main_content .project_list li:nth-child(6),
+.main_content .project_list li:nth-child(7){
+    margin-bottom: 0;
+}
+
+
+.main_content .project_list li img{
+    width: 100%;
+}
+
+.main_content .project_list li .hover_contents{
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.75);
+    transition: 0.3s;
+}
+
+.main_content .project_list li:hover .hover_contents{
+    opacity: 1;
+}
+
+.main_content .project_list li .hover_contents h4{
+    padding-top: 85px;
+    font-size: 23px;
+    color: #f4af55;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main_content .project_list li .hover_contents a{
+    display: inline-block;
+    margin-top: 48px;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+
+
+/* footer */
+
+footer{
+    text-align: center;
+    position: relative;
+}
+
+footer .envelop_icon{
+    background-color: rgba(244, 175, 85, .9);
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    padding: 0 35px;
+    top: -54px;
+    
+}
+
+footer .envelop_icon i{
+    line-height: 81px;
+    font-size: 55px;
+}
+
+footer .subscribe{
+    background-color: #333538;
+    padding: 81px 0 69px;
+}
+
+footer .subscribe p{
+    width: 860px;
+    color: #fff;
+    letter-spacing: 0.1em;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+footer .subscribe form{}
+
+footer .subscribe form input[type="email"]{
+    border: none;
+    width: 300px;
+    height: 54px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-right: 17px;
+}
+
+footer .subscribe form input[type="email"]::placeholder{
+    font-style: italic;
+    color: #989898;
+}
+
+footer .subscribe form input[type="submit"]{
+    background: none;
+    width: 189px;
+    line-height: 54px;
+    color: #f0ad64;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+footer .share{
+    margin: 54px 0;
+}
+
+footer .share a{
+    display: inline-block;
+    width: 24px; height: 24px;
+    border-radius: 3px;
+    color: #f6604c;  
+    font-size: 27px;
+    margin-right: 7px;
+}
+  
+
+footer .share a i{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

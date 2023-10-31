@@ -1,0 +1,782 @@
+@charset "UTF-8";
+
+/* 
+font-family: 'Nanum Brush Script', cursive;
+font-family: 'Nanum Gothic', sans-serif;
+ */
+
+
+#header {
+    height: 325px;
+    background: url(https://cdn.pixabay.com/photo/2023/08/14/15/42/milkyway-8190232_640.jpg) center top;
+}
+
+
+/* contents layout */
+.cont_nav {
+    background-color: #f6fdff;
+}
+
+#cont_tit {
+    background-color: #eaf7fd;
+}
+
+#cont_ban {
+    background-color: #dceff7;
+    overflow: hidden;
+}
+
+#cont_cont {
+    background-color: #f6fdff;
+}
+
+
+/* container */
+.container {
+    width: 990px;
+    margin: 0 auto;
+
+}
+
+/* header */
+
+.header .header_menu {
+    text-align: right;
+}
+
+.header .header_menu a {
+    color: white;
+}
+
+.header .header_tit {
+    text-align: center;
+}
+
+.header .header_tit h1 {
+    background-color: #4aa8d4;
+    color: white;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 40px;
+    padding: 5px 20px 6px;
+    display: inline-block;
+    /* inline요소는 padding과 margin이 좌우만 적용! */
+}
+
+.header .header_tit a {
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    padding: 5px 20px 6px;
+    background-color: #2698cb;
+    margin-top: -5px;
+    /* padding은 음수를 줄수 없음 */
+}
+
+
+.header .header_icon {
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.header .header_icon a {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url(../images/icon.png);
+    margin: 0 3px;
+}
+
+.header .header_icon .icon2 {
+    background-position: 0 -60px;
+}
+
+.header .header_icon .icon3 {
+    background-position: 0 -120px;
+}
+
+.header .header_icon .icon4 {
+    background-position: 0 -180px;
+}
+
+.header .header_icon .icon1:hover {
+    background-position: -60px 0;
+}
+
+.header .header_icon .icon2:hover {
+    background-position: -60px -60px;
+}
+
+.header .header_icon .icon3:hover {
+    background-position: -60px -120px;
+}
+
+.header .header_icon .icon4:hover {
+    background-position: -60px -180px;
+}
+
+
+/* nav */
+.nav {
+    padding: 30px 0;
+    display: none;
+}
+
+.nav>div {
+    float: left;
+    width: 40%;
+}
+
+.nav>div h3 {
+    font-size: 18px;
+    color: #25a2b0;
+    margin-bottom: 4px;
+}
+
+.nav>div ol {
+    overflow: hidden;
+}
+
+.nav>div ol li {
+    float: left;
+    width: 50%;
+    margin-bottom: 3px;
+    position: relative;
+}
+
+.nav>div ol li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #25a2b0;
+    transform: scaleX(0);
+    transform-origin: left top;
+    transition: 0.3s;
+}
+
+.nav>div ol li:hover::after {
+    transform: scale(1);
+}
+
+.nav>div.last {
+    width: 20%;
+}
+
+.nav>div.last ol li {
+    width: 100%;
+}
+
+
+/* cont_tit */
+
+.tit {
+    position: relative;
+}
+
+.tit h2 {
+    font-size: 40px;
+    color: #2c94c4;
+    text-align: center;
+    font-family: 'Nanum Brush Script', cursive;
+    padding: 10px 0;
+    letter-spacing: 3px;
+    /* ->자간 */
+}
+
+.tit .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: url(../images/icon.png) 0 -600px;
+    margin-top: 5px;
+}
+
+.tit .btn .on {
+    background-position: 0 -660px;
+}
+
+
+/* banner영역 */
+.ban {
+    padding: 24px 0 40px;
+    padding-left: 20px;
+}
+
+.ban img {
+    border: 3px solid #dcdcdc;
+}
+
+.ban img:hover {
+    border-color: #98dcdc;
+    opacity: 70%;
+}
+
+
+/* 이미지로 넣을때*/
+.ban .slick-arrow {
+    position: absolute;
+    left: -80px;
+    top: 70px;
+    background: url(../images/icon.png);
+    background-position: -150px 0;
+    width: 43px;
+    height: 43px;
+
+}
+
+.slick-arrow:before {
+    display: none;
+}
+
+.ban .slick-prev:hover {
+    background-position: -193px 0;
+}
+
+.ban .slick-next {
+    left: auto;
+    right: -80px;
+    background-position: -150px -43px;
+}
+
+.ban .slick-next:hover {
+    background-position: -193px -43px;
+}
+
+
+
+
+/* 
+fontawesome으로 넣을때 //안됨 
+.ban .slick-arrow{
+    position: absolute;
+    left: -80px;
+    top: 70px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    visibility: hidden;
+    font-size: 40px;
+    color: #fff;
+}
+
+.ban .slick-prev{ 
+    }
+
+.ban .slick-prev:before{
+    content: "\f060";
+    visibility: visible;
+    width: 43px;
+    height: 43px;
+
+}
+
+
+.ban .slick-next{
+    left: auto;
+    right: 0;
+} */
+
+.slick-dots li button:before {
+    display: none;
+}
+
+
+.ban .slick-dots {
+    text-align: center;
+}
+
+.ban .slick-dots li {
+    display: inline-block;
+    margin: 5px;
+
+}
+
+.ban .slick-dots li button {
+    width: 15px;
+    height: 15px;
+    margin-left: -25px;
+    background-color: #5dbfeb;
+    border-radius: 50%;
+    font-size: 0;
+    cursor: pointer;
+    transform: scaleX(1);
+    transition: 0.3s;
+}
+
+.ban .slick-dots li button:hover {
+    background-color: #2b91c8;
+    transform: scaleX(1.3);
+    transform-origin: left center;
+    border-radius: 7px;
+
+}
+
+/* //ban */
+
+
+.cont {
+    padding-top: 30px;
+}
+
+.cont .column {
+    width: calc((100% - 122px)/3);
+    height: 363px;
+    float: left;
+    padding-right: 30px;
+    margin: 0 30px 30px 0;
+    border-right: 1px solid #c8c8c8;
+    box-sizing: border-box;
+}
+
+.cont .col3 {
+    border-right: 0;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.cont .col6 {
+    border-right: 0;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.cont .column h3 .ico_img {
+    background-image: url(../images/icon.png);
+    background-position: 0 -240px;
+    width: 60px;
+    height: 60px;
+}
+
+.cont .col2 h3 .ico_img {
+    background-position: 0 -300px;
+}
+
+.cont .col3 h3 .ico_img {
+    background-position: 0 -360px;
+}
+
+.cont .col4 h3 .ico_img {
+    background-position: 0 -420px;
+}
+
+.cont .col5 h3 .ico_img {
+    background-position: 0 -480px;
+}
+
+.cont .col6 h3 .ico_img {
+    background-position: 0 -540px;
+}
+
+
+.cont .col1 h3 .ico_img:hover {
+    background-position: -60px -240px;
+}
+
+.cont .col2 h3 .ico_img:hover {
+    background-position: -60px -300px;
+}
+
+.cont .col3 h3 .ico_img:hover {
+    background-position: -60px -360px;
+}
+
+.cont .col4 h3 .ico_img:hover {
+    background-position: -60px -420px;
+}
+
+.cont .col5 h3 .ico_img:hover {
+    background-position: -60px -480px;
+}
+
+.cont .col6 h3 .ico_img:hover {
+    background-position: -60px -540px;
+}
+
+
+.cont .more {
+    width: 17px;
+    height: 17px;
+    background: url(../images/icon.png) -150px -90px;
+    top: 0;
+    right: 0;
+    /* position: absolute; */
+}
+
+.cont .column h3 .ico_tit {
+    font-size: 16px;
+    color: #2c94c4;
+    padding-left: 70px;
+}
+
+.cont .column .ico_desc {
+    border-bottom: 1px solid #c8c8c8;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    padding-left: 70px;
+}
+
+
+/* 게시판영역  col1 */
+
+.notice {
+    position: relative;
+}
+
+.notice h4 {
+    font-size: 14px;
+    color: #0093db;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.notice ul li {
+    /* 말줄임말 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* background로 목차넣기 */
+    background: url(../images/dot.gif) no-repeat 0 40%;
+    padding-left: 8px;
+    padding-bottom: 5px;
+
+}
+
+
+.col1 .more {
+    width: 17px;
+    height: 17px;
+    background: url(../images/icon.png) -150px -90px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.col1 .more:hover {
+    background-position: -167px -90px;
+}
+
+/* 게시판2 */
+
+
+.notice2 {
+    margin-top: 15px;
+    position: relative;
+}
+
+.notice2 h4 {
+    font-size: 14px;
+    color: #0093db;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.notice2 ul li {
+    /* background로 목차넣기 */
+    background: url(../images/dot.gif) no-repeat 0 40%;
+    padding-left: 8px;
+}
+
+.notice2 ul li a {
+    display: inline-block;
+    width: 65%;
+    /* 말줄임말 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.notice2 ul li span {
+    float: right;
+    width: 30%;
+}
+
+
+/* notice_hover  col4 */
+
+.notice_hover h4 {
+    font-size: 14px;
+    color: #0093db;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+.notice_hover ul li {
+    float: left;
+    margin-right: 2%;
+    width: 32%;
+
+}
+
+.notice_hover ul li:nth-child(3n) {
+    margin-right: 0;
+}
+
+.notice_hover ul li a span {
+    display: block;
+    position: relative;
+}
+
+.notice_hover ul li a span img {
+    width: 100%;
+    display: block;
+    /* 
+    이미지요소가 가진 공간을 없애는 방법
+    inline 요소이기 때문에 알수없는 공간이 발생한다
+    1) display: block;
+     */
+}
+
+.notice_hover ul li a span em {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* 영역 안보이게 하기 
+    1)display: none;
+    2)visibility: hidden;
+    3)opacity: 0; --> 애니메이션*/
+    opacity: 0;
+    transition: 0.3s;
+
+    /* 바로가기 가운데 정렬 
+    1)line-height: 92px;
+    2)text-align: center;
+    3)display: flex;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice_hover ul li a span:hover em {
+    opacity: 1;
+}
+
+.notice_hover ul li a strong {
+    font-size: 12px;
+    display: block;
+    padding: 3px 0;
+}
+
+
+/* notice3  col2 */
+
+.notice3 {
+    position: relative;
+}
+
+.notice3 h4 {
+    font-size: 14px;
+    color: #0093db;
+    font-weight: bold;
+    padding-bottom: 3px;
+}
+
+.notice3 ul li {
+    position: relative;
+    padding: 10px 0 16px 60px;
+}
+
+.notice3 ul li a img {
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+
+.notice3 ul li a span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* tab_menu  col5 */
+
+.tab_menu {
+    border: 1px solid #ccc;
+    height: 108px;
+    padding: 8px;
+    position: relative;
+}
+
+.tab_menu ul {
+    border-bottom: 1px solid #ccc;
+    
+}
+
+.tab_menu ul li {
+    float: left;
+    border: 1px solid #ccc;
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
+
+.tab_menu ul li a {
+    display: block;
+    padding: 5px 5px;
+}
+
+.tab_menu ul li.active>a{
+    background-color: #2c94c4;
+    color: #fff;
+}
+
+.tab_menu ul li ul{
+    position: absolute;
+    left: 8px; top: 48px;
+    width: 230px;
+    border: none;
+}
+
+.tab_menu ul li ul li{
+    border: none;
+    float: none;
+    padding-bottom: 3px;
+    background: url(../images/dot.gif)no-repeat 0 35%;
+    padding-left: 7px;
+}
+
+
+.tab_menu ul li ul li a{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 0 3px 0;
+}
+
+.notice4{
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.notice4 h4{
+    border-bottom: 1px solid #ccc;
+    padding: 8px 10px;
+    color: #0093db;
+}
+
+.notice4 h4 em{
+    color: #cf3192;
+}
+
+.notice4 ul li{
+    overflow: hidden;
+    padding: 3px 10px;
+}
+
+.notice4 ul li a{
+    float: left;
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.notice4 ul li span{
+    float: right;
+    width: 30%;
+}
+
+.notice4 .more{
+    position: absolute;
+    background: none;
+    width: auto; height: auto;
+    right: 9px; top: 9px;
+}
+
+
+/* gallery  col6 */
+
+.gallery{
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.gallery h4{
+    font-size: 14px;
+    color: #0093db;
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    padding: 10px 0 8px 11px;
+
+
+}
+
+.gallery .gallery_img img{
+    width: 100%;
+}
+
+.gallery .gallery_Btn{
+    position: absolute;
+    right: 8px;
+    top: 5px;
+}
+
+.gallery .gallery_Btn button{
+    width: 23px;
+    height: 23px;
+    background: url(../images/icon.png);
+    cursor: pointer;
+
+}
+
+.gallery .gallery_Btn .g_icon1{
+    background-position: -150px -120px;
+}
+
+.gallery .gallery_Btn .g_icon2{
+    background-position: -150px -143px;
+
+}
+
+.gallery .gallery_Btn .g_icon3{
+    background-position: -150px -166px;
+
+}
+
+.gallery .gallery_Btn .g_icon4{
+    background-position: -150px -189px;
+
+}
+
+/* button hover */
+
+.gallery .gallery_Btn .g_icon1:hover{
+    background-position: -173px -120px;
+}
+
+.gallery .gallery_Btn .g_icon2:hover{
+    background-position: -173px -143px;
+
+}
+
+.gallery .gallery_Btn .g_icon3:hover{
+    background-position: -173px -166px;
+
+}
+
+.gallery .gallery_Btn .g_icon4:hover{
+    background-position: -173px -189px;
+
+}
+
+/* login_wrap col3 */
+
+
+
+
+
+
