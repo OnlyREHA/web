@@ -1,20 +1,20 @@
-
-
 //menu
-$('.tit .btn').click(function () {
-    // $('.nav').toggle();
-    // $('.nav').fadeToggle();
-    $('.nav').slideToggle();
-    $(this).toggleClass("on");
-});
+$('.tit .btn').click(function (ev) {
+  ev.preventDefault();
+  // $('.nav').toggle();
+  // $('.nav').fadeToggle();
+  $('.nav').slideToggle();
+  $(this).toggleClass("on");
+})
 
 //slide
 $('.ban').slick({
-    infinite: true,
-    slidesToShow: 3,   //=>화면에 보이는 갯수
-    slidesToScroll: 1,  //=>버튼을 클릭하면 넘어가는 갯수
-    dots: true,
-});
+  infinite: true,
+  slidesToShow: 3, //=>화면에 보이는 갯수
+  slidesToScroll: 1, //=>버튼을 클릭하면 넘어가는 갯수
+  dots: true,
+  autoplay:true
+})
 
 //tab_menu영역 - col5
 
@@ -23,50 +23,75 @@ $('.ban').slick({
 //siblings() => 나를 제외한 형제요소
 //find() => 하위요소 (나 안에 있는요소들)
 
-let tab_list=$('.tab_menu')
+let tab_list = $('.tab_menu')
 
 tab_list.find('ul ul').hide();
 tab_list.find('li.active ul').show();
 
 
-$('.tab_menu>ul>li>a').click(function(ev){
-    ev.preventDefault();
+$('.tab_menu>ul>li>a').click(function (ev) {
+  ev.preventDefault();
 
-    let $this = $(this); //변수를 만들때 사용할수있는 특수문자 $, _
-    //console.log($this)
+  let $this = $(this); //변수를 만들때 사용할수있는 특수문자 $, _
+  //console.log($this)
 
-    $this.next().show()
-    $this.parent('li').siblings('li').find('ul').hide()
+  $this.next().show()
+  $this.parent('li').siblings('li').find('ul').hide()
 
-    $this.parent('li').addClass('active');
-    $this.parent('li').siblings('li').removeClass('active');
+  $this.parent('li').addClass('active');
+  $this.parent('li').siblings('li').removeClass('active');
 })
 
 
 //gallery - col6
 
 $('.gallery_img').slick({
-    arrows: false,
+  arrows: false,
 
-  });
+});
 
 
-  $('.gallery_Btn .play').click(function(){
-    $('.gallery_img').slick('slickPlay');
+$('.gallery_Btn .play').click(function () {
+  $('.gallery_img').slick('slickPlay');
 
-  });
+});
 
-  $('.gallery_Btn .pause').click(function(){
-    $('.gallery_img').slick('slickPause');
+$('.gallery_Btn .pause').click(function () {
+  $('.gallery_img').slick('slickPause');
 
-  });
+});
 
-  $('.gallery_Btn .prev').click(function(){
-    $('.gallery_img').slick('slickPrev');
+$('.gallery_Btn .prev').click(function () {
+  $('.gallery_img').slick('slickPrev');
 
-  });
+});
 
-  $('.gallery_Btn .next').click(function(){
-    $('.gallery_img').slick('slickNext');
+$('.gallery_Btn .next').click(function () {
+  $('.gallery_img').slick('slickNext');
 
-  });
+});
+
+
+lightGallery(document.getElementById('lightgallery'), {
+  plugins: [lgThumbnail],
+
+});
+
+
+//레이어 팝업
+$('.layer').click(function (ev) {
+  ev.preventDefault(); //새로고침 막기
+  //$('#layer').show();
+  $('#layer').fadeIn();
+})
+
+$('#layer .close').click(function (ev) {
+  ev.preventDefault(); //새로고침 막기
+  $('#layer').fadeOut();
+})
+
+// window창 열기
+$('.window').click(function (ev) {
+  ev.preventDefault();
+  window.open("popup.html", "popup","top=500,left=500,width=900,height=600");
+})
